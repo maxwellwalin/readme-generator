@@ -4,6 +4,8 @@ const inquirer = require("inquirer");
 const writeToFile = (answers) =>
     `# ${answers.title}
 
+![license badge](https://img.shields.io/badge/License-${encodeURIComponent(answers.license.trim())}-green)
+
 ## Description
 ${answers.desc}
         
@@ -22,7 +24,7 @@ ${answers.inst}
 ${answers.usage}
 
 ## License
-${answers.license}
+This application is covered under ${answers.license}. Please visit [here](https://choosealicense.com/licenses/) for more information about this license.
 
 ## Contributing
 ${answers.guidelines}
@@ -31,7 +33,7 @@ ${answers.guidelines}
 ${answers.test}
 
 ## Questions
-Please visit my [GitHub account](github.com/${answers.github}) or contact me via email at ${answers.email} if you have any questions.`
+Please visit my [GitHub account](https://github.com/${answers.github}) or contact me via email at ${answers.email} if you have any questions.`
 
 const init = () => {
     inquirer.prompt([
