@@ -1,9 +1,7 @@
-// TODO: Include packages needed for this application
 const fs = require("fs");
 const inquirer = require("inquirer");
 
-// TODO: Create a function to write README file
-const writeToFile = (answers) => 
+const writeToFile = (answers) =>
     `# ${answers.title}
 
 ## Description
@@ -13,7 +11,7 @@ ${answers.desc}
 [Installation](#installation)  
 [Usage](#usage)  
 [License](#license)  
-[Contributing](##contributing)  
+[Contributing](#contributing)  
 [Tests](#tests)  
 [Questions](#questions)  
 
@@ -35,7 +33,6 @@ ${answers.test}
 ## Questions
 Please visit my [GitHub account](github.com/${answers.github}) or contact me via email at ${answers.email} if you have any questions.`
 
-// TODO: Create a function to initialize app
 const init = () => {
     inquirer.prompt([
         {
@@ -72,7 +69,7 @@ const init = () => {
             type: 'list',
             message: 'Which license is your application covered under?',
             name: 'license',
-            choices: ['L1', 'L2', 'L3'],
+            choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense'],
         },
         {
             type: 'input',
@@ -85,14 +82,12 @@ const init = () => {
             message: "Enter your email address: ",
         },
     ])
-    .then((answers) => {
-    const READMEContent = writeToFile(answers);
+        .then((answers) => {
+            const READMEContent = writeToFile(answers);
 
-    fs.writeFile('README.md', READMEContent, (err) =>
-    err ? console.log(err) : console.log('Successfully created README.md!'))
-});
+            fs.writeFile('README.md', READMEContent, (err) =>
+                err ? console.log(err) : console.log('Successfully created README.md!'))
+        });
 }
 
-
-// Function call to initialize app
 init();
