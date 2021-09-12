@@ -8,11 +8,29 @@ You can quickly and easily create a README file by using a command-line applicat
 
 This project is a command-line application that dynamically generates a professional README.md file from a user's input using the [Inquirer package](https://www.npmjs.com/package/inquirer).
 
+## Installation
+
+Clone this repository and navigate to its directory in the terminal. 
+
+If you do not have Node.js already installed on your computer, navigate to [here](https://nodejs.org/en/) to download it.
+
+Make sure to download to required dependencies by entering the following command into the console:
+
+```bash
+npm install 
+```
+
+Once the package-lock.json file is added, all installation required to invoke the application has been completed.
+
+## Usage
+
 The application is invoked by using the following command:
 
 ```bash
 node index.js
 ```
+
+Enter the desired information into each of the Inquirer prompts and a README.md file will be generated with the input information in the ./generated_README folder.
 
 ## User Story
 
@@ -43,4 +61,6 @@ THEN I am taken to the corresponding section of the README
 ```
 
 # Technology Used
-node.js, inquirer package, fs package
+- [node.js](https://nodejs.org/en/)
+- node.js [Inquirer package](https://www.npmjs.com/package/inquirer)
+- node.js [fs package](https://www.npmjs.com/package/fs)

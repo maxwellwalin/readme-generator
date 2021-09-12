@@ -69,7 +69,7 @@ const init = () => {
             type: 'list',
             message: 'Which license is your application covered under?',
             name: 'license',
-            choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense'],
+            choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'Not Licensed'],
         },
         {
             type: 'input',
@@ -85,8 +85,8 @@ const init = () => {
         .then((answers) => {
             const READMEContent = writeToFile(answers);
 
-            fs.writeFile('README.md', READMEContent, (err) =>
-                err ? console.log(err) : console.log('Successfully created README.md!'))
+            fs.writeFile('./generated_README/README.md', READMEContent, (err) =>
+                err ? console.log(err) : console.log('Successfully created README.md in ./generated_README!'))
         });
 }
 
