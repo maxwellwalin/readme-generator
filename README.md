@@ -32,6 +32,8 @@ node index.js
 
 Enter the desired information into each of the Inquirer prompts and a README.md file will be generated with the input information in the ./generated_README folder.
 
+[Link](https://drive.google.com/file/d/1kvIr3XS0Kk4FnF7GcpwrCkCPlgodCZMY/view) to video demonstrating this applications functionality and usage.
+
 ## User Story
 
 ```md
